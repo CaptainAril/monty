@@ -1,7 +1,5 @@
 #include "monty.h"
 
-/* global flag struct for queue and stack length */
-var_t var;
 
 int main(int argc, char *argv[])
 {
@@ -76,6 +74,7 @@ void myfile_close(int status, void *arg)
 int check_isdigit(char *str)
 {
 	int c;
+
 	for (c = 0; str[c]; c++)
 	{
 		if (str[c] == '-' && c == 0)

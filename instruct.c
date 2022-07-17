@@ -1,5 +1,7 @@
 #include "monty.h"
 
+var_t var;
+
 /**
  * instruct_push - pushes a data/number to stack
  * @stack: pointer to the top node of stack
@@ -9,6 +11,7 @@ void instruct_push(stack_t **stack, unsigned int line)
 {
 	char *str;
 	int num;
+
 	str = strtok(NULL, "\n\t\r ");
 	if (str == NULL || check_isdigit(str))
 	{
@@ -51,6 +54,7 @@ void instruct_pall(stack_t **stack, unsigned int line)
 void instruct_pint(stack_t **stack, unsigned int line)
 {
 	stack_t *head = *stack;
+
 	if (var.len_stack == 0)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line);
@@ -67,6 +71,7 @@ void instruct_pint(stack_t **stack, unsigned int line)
 void instruct_pop(stack_t **stack, unsigned int line)
 {
 	stack_t *pop = *stack;
+
 	if (var.len_stack == 0)
 	{
 		fprintf(stderr, "L%u: can't pop an empty stack\n", line);
@@ -90,6 +95,7 @@ void instruct_pop(stack_t **stack, unsigned int line)
 void instruct_swap(stack_t **stack, unsigned int line __attribute__ ((unused)))
 {
 	stack_t *tmp;
+
 	if (var.len_stack < 2)
 	{
 		fprintf(stderr, "L%u: can't swap, stack too short\n", line);

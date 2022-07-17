@@ -8,6 +8,7 @@
 void instruct_mod(stack_t **stack, unsigned int line)
 {
 	int n;
+
 	if (var.len_stack < 2)
 	{
 		fprintf(stderr, "L%u: can't mod, stack too short\n", line);
@@ -31,6 +32,7 @@ void instruct_mod(stack_t **stack, unsigned int line)
 void instruct_pchar(stack_t **stack, unsigned int line)
 {
 	int ch;
+
 	if (var.len_stack < 1)
 	{
 		fprintf(stderr, "L%u: can't pchar, stack empty\n", line);
@@ -54,6 +56,7 @@ void instruct_pstr(stack_t **stack, unsigned int line __attribute__ ((unused)))
 {
 	stack_t *tmp;
 	int ch;
+
 	tmp = *stack;
 	while (tmp != NULL)
 	{

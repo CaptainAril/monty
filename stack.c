@@ -37,8 +37,6 @@ stack_t *add_node(stack_t **stack, const int n)
 	return (new);
 }
 
-/* global struct to hold flag for queue and stack length */
-var_t var;
 
 /**
  * free_stack - frees malloced in stack nodes memory
