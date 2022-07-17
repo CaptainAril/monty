@@ -1,1 +1,4 @@
 Welcome to monty
+Creating the monty interpreter
+Using Stacks and queues 
+with linked list
